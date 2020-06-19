@@ -1,5 +1,6 @@
 package com.learningApp.appupdate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -62,5 +63,10 @@ public class MainActivity extends AppCompatActivity {
     public void callImmediateUpdate(View view) {
         // Start a Immediate Update
         mUpdateManager.mode(UpdateManagerConstant.IMMEDIATE).start();
+    }
+
+    public void gotoNextActivity(View view) {
+      Intent i = new Intent(MainActivity.this,Main2Activity.class);
+      startActivity(i);
     }
 }
